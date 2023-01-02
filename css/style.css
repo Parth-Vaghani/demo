@@ -1,0 +1,115 @@
+*, *::after, *::before{
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: black;
+}
+
+.container{
+    max-width: 1140px;
+    margin: auto;
+}
+
+.row{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.height{
+    height: 100vh;
+    align-items: center;
+}
+
+.bg{
+    position: relative;
+    overflow: hidden;
+}
+
+.bg1{
+    background-color: blue;
+}
+
+.box{
+    width: 100%;
+    height: 400px;
+    background-color: rgba(255, 255, 255, 0.50);
+    border-radius: 25px;
+    backdrop-filter: blur(20px);
+    position: relative;
+    z-index: 1;
+}
+
+.rounded{
+    width: 100px;
+    height: 100px;
+    background-color: bisque;
+    position: absolute;
+    border-radius: 100%;
+    z-index: 0;
+}
+
+.rounded1{
+    left: 25%;
+    animation: rounded1 10s infinite linear;
+}
+
+@keyframes rounded1{
+    0%{left: 25%; bottom: 0;}
+    100%{left: 25%; bottom: 100%;}
+}
+
+.rounded2{
+    left: 50%;
+    animation: rounded2 10s infinite linear;  
+}
+
+@keyframes rounded2{
+    0%{left: 50%; top: 0;}
+    100%{left: 50%; top: 100%;}
+}
+
+.rounded3{
+    left: 70%;
+    animation: rounded3 10s infinite linear;
+}
+
+@keyframes rounded3{
+    0%{left: 70%; bottom: 0;}
+    100%{left: 70%; bottom: 100%;}
+}
+
+.loader-bg{
+    background-color: bisque;
+}
+
+.loader{
+    width: 100px;
+    height: 100px;
+    margin: auto;
+    border-radius: 100%;
+    position: relative;
+    border: 10px solid white;
+}
+
+.loader::after{
+    position: absolute;
+    content: "";
+    width: 100px;
+    height: 100px;
+    left: -10px;
+    top: -10px;
+    border-radius: 100%;
+    border: 10px solid;
+    border-color: black transparent transparent;
+    animation: loader 1s infinite linear;
+}
+
+@keyframes loader{
+    0%{transform: rotate(0deg);}
+    100%{transform: rotate(360deg);}
+}
